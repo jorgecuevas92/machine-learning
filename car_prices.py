@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 
-"""This module uses machine learning to predict motorcycle prices"""
+"""This module uses machine learning to predict motorcycle prices based on the year and mileage in kilometers."""
 
 import numpy as np
 import matplotlib.pyplot as pyplot
 from sklearn import linear_model
 
 def main():
-    """This function executes the main program"""
+    """This function executes the main program."""
     x_values = np.array([
         2011,
         2013,
