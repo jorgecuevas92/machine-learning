@@ -54,9 +54,6 @@ def main():
     # Print the accuracy of the prediction model based on the training set.
     print reg.score(features_train, price_values)
 
-    # Plot the prediction model.
-    # pyplot.plot(year_values, reg.predict(features_train))
-
     print reg.predict(features_train)
 
     # Add 3D plot for the data.
