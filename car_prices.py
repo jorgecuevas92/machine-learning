@@ -4,6 +4,7 @@
 import json
 import numpy as np
 import matplotlib.pyplot as pyplot
+from mpl_toolkits.mplot3d import Axes3D
 from sklearn import linear_model
 
 def main():
@@ -54,8 +55,21 @@ def main():
     print reg.score(features_train, price_values)
 
     # Plot the prediction model.
-    pyplot.plot(year_values, reg.predict(features_train))
+    # pyplot.plot(year_values, reg.predict(features_train))
 
+    print reg.predict(features_train)
+
+    # Add 3D plot for the data.
+    fig = pyplot.figure()
+
+    ax = fig.add_subplot(111, projection='3d')
+
+    ax.scatter(year_values, km_values, price_values, label='parametric curve')
+    ax.legend()
+    ax.set_xlabel('Year')
+    ax.set_ylabel('Kilometers')
+    ax.set_zlabel('Value')
+    
     # Show the plot results.
     pyplot.show()
 
