@@ -1,70 +1,62 @@
 #!/usr/bin/env python
 
 """This module uses machine learning to predict motorcycle prices based on the year and mileage in kilometers."""
-
+import json
 import numpy as np
 import matplotlib.pyplot as pyplot
 from sklearn import linear_model
 
 def main():
     """This function executes the main program."""
-    x_values = np.array([
-        2011,
-        2013,
-        2001,
-        2016,
-        2012,
-        2017,
-        2011,
-        2014,
-        2008,
-        2012,
-        2015,
-        2017])
 
-    y_values = np.array([
-        10500,
-        13500,
-        6000,
-        23000,
-        14000,
-        25000,
-        17500,
-        18000,
-        11500,
-        13000,
-        17500,
-        24000])
+    # Prevent scientific notation on numpy arrays for this example.
+    np.set_printoptions(suppress=True)
 
-    test = np.array([
-        [2011, 25000],
-        [2013, 60000],
-        [2001, 5000],
-        [2016, 13569],
-        [2012, 15000],
-        [2017, 70],
-        [2011, 20000],
-        [2014, 60000],
-        [2008, 49233],
-        [2012, 72000],
-        [2015, 10000],
-        [2017, 4000]])
-    print x_values
-    print y_values
-    print test
+    # Import existing motorcycle objects from the file.
+    motorcycles = json.load(open('./motorcycles.json'))
 
+    # Define the numpy arrays for years, kilometers and prices.
+    year_values = np.array([])
 
-    pyplot.scatter(x_values, y_values)
+    km_values = np.array([])
+
+    price_values = np.array([])
+
+    # Assign the values for each motorcycle.
+    for moto in motorcycles:
+        year_values = np.append(year_values, int(moto['year']))
+        km_values = np.append(km_values, int(moto['km']))
+        price_values = np.append(price_values, int(moto['price']))
+
+    # Define the training features array  from the years and km
+    # arrays and transpose it.
+    features_train = np.array([year_values, km_values]).T
+
+    print year_values
+    print price_values
+    print features_train
+
+    # Plot the dots for price as a function of years.
+    pyplot.scatter(year_values, price_values)
     pyplot.xlabel('Modelo')
     pyplot.ylabel('Precio')
 
+    # Define the linear regression.
     reg = linear_model.LinearRegression()
-    reg.fit(test, y_values)
 
+    # Train it with the features and target values.
+    reg.fit(features_train, price_values)
+
+    # Predict the price based on year and kilometers: [[years, km]].
     print reg.predict([[2011, 23000]])
-    print reg.score(test, y_values)
 
-    pyplot.plot(x_values, reg.predict(test))
+    # Print the accuracy of the prediction model based on the training set.
+    print reg.score(features_train, price_values)
+
+    # Plot the prediction model.
+    pyplot.plot(year_values, reg.predict(features_train))
+
+    # Show the plot results.
     pyplot.show()
 
 
