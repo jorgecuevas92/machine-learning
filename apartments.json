@@ -1,0 +1,112 @@
+[
+    {
+        "id": "53597545",
+        "squared_meters": 236,
+        "rooms": 3,
+        "bathrooms": 3,
+        "half_bathrooms": 0,
+        "parking_lots": 2,
+        "years": 9,
+        "zone": "Puerta de Hierro",
+        "price": 28500
+    },
+    {
+        "id": "53484612",
+        "squared_meters": 350,
+        "rooms": 3,
+        "bathrooms": 4,
+        "half_bathrooms": 1,
+        "parking_lots": 4,
+        "years": 9,
+        "zone": "Puerta de Hierro",
+        "price": 51700
+    },
+    {
+        "id": "53701082",
+        "squared_meters": 185,
+        "rooms": 3,
+        "bathrooms": 2,
+        "half_bathrooms": 1,
+        "parking_lots": 3,
+        "years": 7,
+        "zone": "Puerta de Hierro",
+        "price": 26000
+    },
+    {
+        "id": "52382508",
+        "squared_meters": 180,
+        "rooms": 3,
+        "bathrooms": 4,
+        "half_bathrooms": 0,
+        "parking_lots": 3,
+        "years": 9,
+        "zone": "Puerta de Hierro",
+        "price": 28900
+    },
+    {
+        "id": "53668974",
+        "squared_meters": 200,
+        "rooms": 3,
+        "bathrooms": 3,
+        "half_bathrooms": 0,
+        "parking_lots": 3,
+        "years": 7,
+        "zone": "Puerta de Hierro",
+        "price": 33000
+    },
+    {
+        "id": "53505717",
+        "squared_meters": 225,
+        "rooms": 3,
+        "bathrooms": 4,
+        "half_bathrooms": 0,
+        "parking_lots": 2,
+        "years": 9,
+        "zone": "Puerta de Hierro",
+        "price": 25500
+    },
+    {
+        "id": "53719978",
+        "squared_meters": 160,
+        "rooms": 3,
+        "bathrooms": 3,
+        "half_bathrooms": 0,
+        "parking_lots": 3,
+        "years": 5,
+        "zone": "Puerta de Hierro",
+        "price": 25000
+    },
+    {
+        "id": "53638545",
+        "squared_meters": 300,
+        "rooms": 3,
+        "bathrooms": 4,
+        "half_bathrooms": 0,
+        "parking_lots": 3,
+        "years": 5,
+        "zone": "Puerta de Hierro",
+        "price": 38000
+    },
+    {
+        "id": "53625291",
+        "squared_meters": 300,
+        "rooms": 3,
+        "bathrooms": 3,
+        "half_bathrooms": 1,
+        "parking_lots": 3,
+        "years": 9,
+        "zone": "Puerta de Hierro",
+        "price": 36000
+    },
+    {
+        "id": "53636474",
+        "squared_meters": 200,
+        "rooms": 3,
+        "bathrooms": 2,
+        "half_bathrooms": 1,
+        "parking_lots": 3,
+        "years": 7,
+        "zone": "Puerta de Hierro",
+        "price": 35000
+    }
+]
